@@ -1,4 +1,4 @@
-# SplatNet (plus?)
+# SplatNet (Plus?)
 Yes, because Nintendo.
 
 # Requirements
