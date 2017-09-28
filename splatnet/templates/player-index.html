@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+	<h1>{{ player.MiiName }}</h1>
+    <p>This is a player!<br>They are at level {{ player.get_Rank_display }}, rank {{ player.get_Udemae_display }}!</p>
+	<figure>
+		<img src="{{ player.Face }}" alt="Inkling">
+		<figcaption>{% if player.Model %}Ngyes{% else %}Woomy{% endif %}</figcaption>
+	</figure>
+		<p>Right now, they've been in {{ sessions_count }} session{% if not sessions_count == 1 %}s{% endif %}.{% if se_count_difference %} ({{ se_count_difference }} more not shown){% endif %}</p>
+		<ul>
+			{% for session in sessions %}
+			<li><a href="{% url "SessionSummary" session.Player.PId session.id %}">{{ session }}</a></li>
+			{% endfor %}
+		</ul>
+{% endblock %}

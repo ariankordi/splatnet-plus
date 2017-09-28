@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+	<h1>SplatNet</h1>
+    <p>Yo</p>
+	<p>Right now, there's {{ players_count }} player{% if not players_count == 1 %}s{% endif %} here.{% if pl_count_difference %} ({{ pl_count_difference }} more not shown){% endif %}</p>
+		<ul>
+			{% for player in players %}
+			<li><a href="{% url "PlayerIndex" player.PId %}">{{ player }}</a></li>
+			{% endfor %}
+		</ul>
+{% endblock %}
