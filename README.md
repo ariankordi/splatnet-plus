@@ -1,5 +1,5 @@
 # SplatNet (Plus?)
-Yes, because Nintendo.
+Again, like AltNNAS, this is an attempt at an alt server from 2017 that isn't finished, but you can glance at it, I guess.
 
 # Requirements
 Not much.
